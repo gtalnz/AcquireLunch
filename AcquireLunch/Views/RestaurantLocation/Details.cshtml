@@ -1,0 +1,50 @@
+﻿@model AcquireLunch.Models.RestaurantLocation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>RestaurantLocation</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LocationName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LocationName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Phone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Fax)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fax)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Restaurant.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Restaurant.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.RestaurantLocationId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,29 @@
+﻿@model AcquireLunch.Models.SingleOrder
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>SingleOrder</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Notes)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Notes)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Person.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Person.FirstName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.SingleOrderId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
