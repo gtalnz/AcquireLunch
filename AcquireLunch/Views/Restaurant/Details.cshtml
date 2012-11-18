@@ -22,6 +22,18 @@
     <div class="display-field">
         @Html.DisplayFor(model => model.Website)
     </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.RestaurantLocations)
+    </div>
+    <div class="display-field">
+        @foreach (var location in Model.RestaurantLocations)
+        {
+            <div class="location name">
+                @Html.ActionLink(location.LocationName, "Details", "RestaurantLocation", new { id = "1" }, null)
+            </div>
+        }
+    </div>
+        
 </fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.RestaurantId }) |
