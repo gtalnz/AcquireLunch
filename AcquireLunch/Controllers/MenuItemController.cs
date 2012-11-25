@@ -23,6 +23,14 @@ namespace AcquireLunch.Controllers
         }
 
         //
+        //GET: /MenuItem/Restaurant/5
+        public JsonResult Restaurant(int id = 0)
+        {
+            Restaurant restaurant = db.Restaurants.Find(id);
+            return Json(restaurant.MenuItems, JsonRequestBehavior.AllowGet);
+        }
+
+        //
         // GET: /MenuItem/Details/5
 
         public ActionResult Details(int id = 0)

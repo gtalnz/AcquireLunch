@@ -13,6 +13,14 @@ namespace AcquireLunch.Models
         public string Phone { get; set; }
         public bool IsInternal { get; set; }
 
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+        }
+
         public virtual List<SingleOrder> SingleOrders { get; set; }
     }
 }
